@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nacionalidade</title>
+    <title>Nacionalidades</title>
 </head>
 <body>
-    <h1>Sistema de Nacionalidade</h1>
-    Em que país mora? <input type="text" name="nacional" id="nacional">
-    <input type="button" value="verificar" onclick="calcular">
-    <div id="res">
-    </div>
+    <h1>Nacionalidades</h1>
+     Qual é o seu País? <input type="text" name="txtvel" id="txtvel"> 
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+        
     <script>
-        function calcular() {
-            var nacion = window.document.querySelector('input#nacional')
-            var res = window.document.querySelector('div#res')
-            var vel = Text(nacion.value)
-            res.innerHTML = `<p>Sua nacionalidade é <strong>${vel}</strong></p>`
-            if ( res += Brasil) {
-                res.innerHTML == `<p> És Brasileiro. </p>`
-            } else { res.innerHTML += `<p> És estrangeiro. </p>` 
-            }
-        }
+        function calcular(){
+        var n1 = window.document.querySelector("input#txtvel")
+        var res = window.document.querySelector("div#res")
+        var pais = String(n1.value)
+        res.innerHTML = `<p> O seu pais é <strong>${pais}.</strong><p>`
+          if (pais == 'Portugal') {
+        res.innerHTML += `<p> Você é Português.<p>`}
+          else  {
+        res.innerHTML += `<p> Você é Estrangeiro.<p>`}
+       
+    }
+
     </script>
 </body>
 </html>

@@ -9,13 +9,15 @@ function verificar() {
         var fsex = document.getElementsByName("radsex")
         var idade = ano - Number(fano.value)
         var género = ""
-        if (fsex[0].checked) {
+        var img = document.createElement("img")
+        img.setAttribute("id", "foto")
+    if (fsex[0].checked) {
             género = "homem"
             if (idade >=0 && idade < 10) {
                 img.setAttribute("src", "foto-bebe-m.png")
             } else if (idade < 21) { 
                 img.setAttribute("src", "foto-jovem-m.png")
-            } else if (idade < 50) {
+            } else if (idade < 60) {
                 img.setAttribute("src", "foto-adulto-m.png")
             } else {
                 img.setAttribute("src", "foto-idoso-m.png")
@@ -26,7 +28,7 @@ function verificar() {
                 img.setAttribute("src", "foto-bebe-f.png")
             } else if (idade < 21) { 
                 img.setAttribute("src", "foto-jovem-f.png")
-            } else if (idade < 50) {
+            } else if (idade < 60) {
                 img.setAttribute("src", "foto-adulto-f.png")
             } else {
                 img.setAttribute("src", "foto-idoso-f.png")

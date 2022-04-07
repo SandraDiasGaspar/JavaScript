@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio reajuste salarial</title>
+    <style>
+        body {
+            font: normal 16px arial;
+        }
+
+        input {
+            padding: 16px;
+            font: normal 14px arial;
+        }
+
+        p {
+            font: normal 14px arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <input type="button" value="Reajustar salarial" onclick="clicar()">
+    <p>Clique no botão acima para iniciar.</p>
+    
+    <script>
+        function clicar(){
+            var nome = prompt("Qual é o nome do/a funcionário/a?")
+            var sal = Number(prompt(`Qual é o salário de ${nome}?`).replace(",","."))
+            var sal = sal.toFixed(2)
+            var aum = Number(prompt(`O salário de ${nome} vai ser reajustado em qual percentagem?`))
+            var aum = aum.toFixed(0)
+            var vlaum = Number(sal*aum/100)
+            var final = Number(sal) + (vlaum)
+            var final = final.toFixed(2)
+            window.alert(`${nome} recebeu um aumento salarial!\n\nO salário atual era de R$ ${sal}.\n\nCom um aumento de ${aum}%, o salário vai aumentar R$ ${vlaum} no próximo mês.\n\nE a partir daí, ${nome} vai passar a ganhar R$ ${final}.`)
+
+        }
+    </script>
+</body>
+</html>

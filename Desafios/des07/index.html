@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas (R$ -> US$)</title>
+    <style>
+        body{
+            font: normal 16px arial;
+        }
+
+        input{
+            padding: 15px;
+            font: normal 14px arial;
+        }
+
+        p {
+            font: normal 14px arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var dolar = Number(prompt("Antes de mais nada. Quanto está a cotação do dolar agora?".replace(",",".")))
+                 
+    </script>
+    <h1>Conversor R$ -> US$</h1>
+    <input type="button" value="Converter" onclick=converter()>
+    <p>Clique no botão acima para iniciar.</p>
+    <div id="res"></div>
+    <script>
+        function converter(){
+            var conv = Number(prompt("Quantos R$ tem na sua carteira?".replace(",",".")))
+            var res = document.getElementById("res")
+            res = conv / dolar
+            res = res.toFixed(2)
+            window.alert(`Vai conseguir comprar ${res}40 dolares. `)
+            
+        }
+    </script>
+</body>
+</html>

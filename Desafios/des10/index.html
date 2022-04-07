@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolvendo Bhaskara</title>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <p>Considerando uma equação no formato ax² + bx + c = 0, aperte o botão acima para calcular o valor de ▲. </p>
+    <script>
+        function calcular(){
+            var a = Number(prompt("Qual o valor de a?"))
+            var b = Number(prompt("Qual o valor de b?"))
+            var c = Number(prompt("Qual o valor de c?"))
+            var delta = (b*b)-(4*a*c)
+            window.alert(`Resolvendo Bhaskara\nA equação atual é de ${a}x² + ${b}x + ${c} = 0\nO cálculo realizado será de ▲ = ${b}² - 4 . ${a} . ${c}\nO valor calculado foi de ▲ = ${delta}`)
+
+        }
+    </script>
+</body>
+</html>

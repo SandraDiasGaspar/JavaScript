@@ -1,11 +1,9 @@
 @charset "UTF-8";
-
-
 header {
     color: white;
     font: 20px;
     text-align: center;
-   
+  
 }
 
 body{
@@ -21,8 +19,7 @@ section {
     background-color: white;
     border-radius: 10px;
     width: 500px;
-    margin: auto;
-    text-align: left;
+    margin: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 
 

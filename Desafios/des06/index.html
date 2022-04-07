@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperaturas</title>
+    <style>
+        body {
+            font: normal 16px arial;
+        }
+
+        input {
+            padding: 15px;
+        }
+        p {
+            font: normal 14px arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <input type="button" value="Converter" onclick="converter()">
+    <p>Clique no botão acima para iniciar.</p>
+     
+    <script>
+        function converter() {
+          var temp = Number(prompt("Digite uma temperatura em ºC (Celsius):".replace(",",".")))
+          var kelvin = temp + 273.15
+          kelvin = kelvin.toFixed(2)
+          var fah = temp * 1.8 + 32
+          fah = fah.toFixed(2)
+          window.alert(`A temperatura de ${temp}ºC, corresponde a...\n${kelvin}ºK (Kelvin). \n${fah}ºF (Fahrenheit).`)
+        }
+    </script>
+   
+</body>
+</html>

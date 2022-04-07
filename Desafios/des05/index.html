@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do conversor de medidas</title>
+    <style>
+        body {
+            font: normal 16px arial;
+        }
+
+        input {
+            padding: 15px;
+            font: normal 14px arial;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <input type="button" value="Converter" onclick="converter()">
+    <p>Clique no botão acima para iniciar.</p>
+    
+    <script>
+        function converter(){
+            var dist = Number(prompt("Digite uma distância em metros (m).").replace(",",".")).toFixed(2)
+            window.alert(`A distância de ${dist} metros, corresponde aos seguintes valores convertidos:\n${dist/1000} quilómetros (Km).\n${dist/100} hectómetros (Hm).\n${dist/10} decâmetros (Dam).\n${dist*10} decímetros (dm)\n${dist*100} centimetros (cm)\n${dist*1000} milimetros (mm)\n`) 
+            
+
+        }
+    </script>
+
+
+</body>
+</html>

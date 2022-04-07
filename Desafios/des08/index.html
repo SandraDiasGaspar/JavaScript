@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio desconto de 10%</title>
+    <style>
+        body {
+            font: normal 16px arial;
+        }
+        input {
+            padding: 15px;
+            font: normal 16px arial;
+        }
+        p {
+            font: normal 14px arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <input type="button" value="Desconto de 10%" onclick="clicar()">
+    <p>Clique no botão acima para iniciar.</p>
+
+    <script>
+        function clicar(){
+            var prod = prompt("Qual é o produto que pretende comprar?")
+            var preco = Number(prompt(`Qual é o preço do/a ${prod}?`).replace (",","."))
+            preco = preco.toFixed(2)
+            window.alert(`Calculando o desconto de 10% no/a ${prod}.\nO preço original era de R$ ${preco}.\nAcaba de ganhar R$ ${preco*0.10},00 de desconto (-10%).\nNo final, vai pagar R$ ${preco*0.90},00 no produto ${prod}.`)
+        }
+    </script>
+</body>
+</html>

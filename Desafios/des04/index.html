@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da calculadora de troco</title>
+    <style>
+        body {
+            font: normal 16px arial;
+        }
+
+        input {
+            padding: 15px;
+            font: normal 16px arial;
+        }
+
+        p {
+            font: normal 12px arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <input type="button" value="Comprar produto" onclick="comprar()">
+    <p>Clique no botão</p>
+
+    <script>
+        function comprar(){
+            var prod = window.prompt("Que produto está comprando?")
+            var preco = Number(prompt(`Qual é o preço do/a ${prod} em Euros?`))
+            var euro = Number(prompt(`Qual foi o valor que deu para pagar o/a ${prod} em Euros?`))
+            window.alert(`Comprou o/a ${prod} que custou ${preco} €.\n Deu ${euro} € em dinheiro e vai receber de troco ${euro-preco} €.\n Volte Sempre!!`)
+        }
+    </script>
+</body>
+</html>

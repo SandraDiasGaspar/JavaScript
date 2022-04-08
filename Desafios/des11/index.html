@@ -5,15 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ano Bissexto</title>
+    <style>
+        body {
+            font: normal 16px arial;
+        }
+        input {
+            font: normal 16px arial;
+            padding: 16px;
+        }
+    </style>
 </head>
 <body>
     <h1>Ano Bissexto</h1>
     <input type="button" value="Verificar" onclick="verificar()">
     <p>Informe um ano para saber se ele é bissexto.</p>
-
+    <div id ="res">
+    </div>
     <script>
-        var ano1 = Number(prompt("Qual é o ano que quer verificar?"))
-        
+        function verificar(){
+        var ano = Number(prompt("Qual é o ano que quer verificar?"))
+        var rest = window.document.getElementById("res")
+        if (ano %  4 == 0 && ano % 100 != 0 || ano % 400 == 0){
+            res.innerHTML = `<h3>Analisando o ano de ${ano}...</h3><br> O ano de ${ano} <mark style = "background-color: red; color: white";>É BISSEXTO.</mark>`
+        } else {
+            res.innerHTML = `<h3>Analisando o ano de ${ano}...</h3><br>O ano de ${ano} <mark style = "background-color: green; color: white";>NÃO É BISSEXTO.</mark>`
+        }
+        }
     </script>
 
     

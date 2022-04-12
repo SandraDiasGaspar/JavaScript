@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço antes, preço depois</title>
+    <style>
+        body{
+            font: normal 18px arial;
+        }
+        input{
+            padding: 16px;
+            font: normal 16px arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Preço mudou</h1>
+    <input type="button" value="Verificar" onclick="clicar()"> <br><br>Clique no botão acima para analisar a mudança de preço.
+    <div id ="res"></div>
+    <script>
+        function clicar(){
+            var ant = Number(prompt("Qual o preço anterior do produto?").replace(",","."))
+            var atual = Number(prompt("Qual é o preço atual do produto?").replace(",","."))
+            var ant = ant.toFixed(2)
+            var atual = atual.toFixed(2)
+            var dif = ant-atual
+            var dif = dif.toFixed(2)
+            var varic = (dif / atual) * 100
+            var varic = varic.toFixed(2)
+            var dif2 = atual-ant
+            var dif2 = dif2.toFixed(2)
+            var varic2 = (dif2 / atual) * 100
+            var varic2 = varic2.toFixed(2)
+            var rest = window.document.getElementById("res")
+            if (ant > atual){
+                res.innerHTML += `<h3>Analisando os valores informados.</h3>O produto custava R$ ${ant} e agora custa R$ ${atual}.<br>Hoje o produto está mais barato.<br>O preço desceu R$ ${dif} em relação ao preço anterior.<br>Um variação de ${varic}% para baixo.`
+            } else {res.innerHTML += `<h3>Analisando os valores informados.</h3>O produto custava R$ ${ant} e agora custa R$ ${atual}.<br>Hoje o produto está mais caro.<br>O preço subiu R$ ${dif2} em relação ao preço anterior.<br>Um variação de ${varic2}% para cima.`
+
+            }
+                
+                
+            
+                
+                
+        }
+    </script>
+</body>
+
+</html>

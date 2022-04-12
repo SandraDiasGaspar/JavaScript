@@ -14,8 +14,8 @@
             font: normal 15px arial;
             text-align: center;
             line-height: 200px;
-            
-        }
+            }
+       
     </style>
 </head>
 <body>
@@ -27,13 +27,18 @@
     <script>
         var a = window.document.getElementById('area')
         function clicar() {
-            a.innerText = 'Clicou'
+            a.innerText = 'Clicou!'
+            a.style.background = "red"
+            a.style.fontSize = "20px"
         }
         function entrar(){
-            a.innerText = 'Entrou'
+            a.innerText = 'Entrou!'
+            a.style.fontSize = "20px"
         }
         function sair(){
-            a.innerText = 'Saiu'
+            a.innerText = 'Saiu!'
+            a.style.background = "green"
+            a.style.fontSize = "20px"
         }
     </script>
 </body>

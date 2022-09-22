@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>To Do JavaScript</title>
+</head>
+<body>
+    <div id="afazeres"></div>
+        <h1>Salve a sua próxima tarefa:</h1>
+            <form action="" id="formulario">
+                <input type="text" name="opcoes" id="opcoes" placeholder="O que você vai fazer?">
+                    <button id="botao" type="submit">
+                        <ion-icon name="verif"></ion-icon>
+                    </button>
+            </form>
+    </div>
+    <div id="listatarefas">
+        <h2>Estas são as suas tarefas:</h2>
+            <ul id="lista">
+                <li class="linhas">
+                    <span class="tarefas">Teste 1</span>
+                    <ion-icon class="somabotao" name="soma"></ion-icon>
+                    <ion-icon class="retirabotao" name="retira"></ion-icon>
+                </li>
+                <li class="linhas">
+                    <span class="tarefas">Teste 2</span>
+                    <ion-icon class="somabotao" name="soma"></ion-icon>
+                    <ion-icon class="retirabotao" name="retira"></ion-icon>
+                </li>
+                <li class="linhas">
+                    <span class="tarefas">Teste 3</span>
+                    <ion-icon class="somabotao" name="soma"></ion-icon>
+                    <ion-icon class="retirabotao" name="retira"></ion-icon>
+                </li>
+            </ul>
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/svg/verif.svg"></script>    
+</body>
+</html>
